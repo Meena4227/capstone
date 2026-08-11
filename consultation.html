@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Online Consultation | TeleCare</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <div class="logo">
+            🩺 TeleCare
+        </div>
+
+        <div class="dashboard-user">
+
+            <span>
+                🟢 Consultation Active
+            </span>
+
+            <a href="patient-dashboard.html"
+               class="logout-btn">
+                ← Dashboard
+            </a>
+            <strong id="summary-patient">
+                Loading...
+            </strong>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="consultation-page">
+
+        <!-- HEADING -->
+
+        <section class="consultation-heading">
+
+            <span>
+                📹 TELECARE ONLINE CONSULTATION
+            </span>
+
+            <h1>
+                Your Consultation with
+                <strong id="consultation-doctor">
+                    Dr. Anjali Rao
+                </strong>
+                👩‍⚕️
+            </h1>
+
+            <p>
+                🩺 General Medicine
+                &nbsp; • &nbsp;
+                📅 12 August 2026
+                &nbsp; • &nbsp;
+                🕐 10:30 AM
+            </p>
+
+        </section>
+
+
+        <!-- CONSULTATION AREA -->
+
+        <section class="consultation-layout">
+
+
+            <!-- VIDEO -->
+
+            <div class="video-section">
+
+                <div class="doctor-video">
+
+                    <div class="doctor-video-icon">
+                        👩‍⚕️
+                    </div>
+
+                    <h2>
+                        Dr. Anjali Rao
+                    </h2>
+
+                    <p>
+                        🟢 Doctor is connected
+                    </p>
+
+                    <span class="video-status">
+                        📹 HD Video
+                    </span>
+
+                </div>
+
+
+                <!-- Patient Video -->
+
+                <div class="patient-video">
+                    <strong id="summary-patient">
+                         Loading...
+                    </strong>
+
+                    <div>
+                        👤
+                    </div>
+
+                    <span>
+                        You
+                    </span>
+
+                </div>
+
+
+                <!-- Controls -->
+
+                <div class="video-controls">
+
+                    <button class="control-btn">
+                        🎤
+                        <small>Mute</small>
+                    </button>
+
+                    <button class="control-btn">
+                        📹
+                        <small>Video</small>
+                    </button>
+
+                    <button class="control-btn">
+                        🔊
+                        <small>Speaker</small>
+                    </button>
+
+                    <button class="control-btn end-call">
+                        📞
+                        <small>End</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHAT -->
+
+            <div class="chat-section">
+
+                <div class="chat-header">
+
+                    <h2>
+                        💬 Chat
+                    </h2>
+
+                    <span>
+                        🟢 Doctor is online
+                    </span>
+
+                </div>
+
+
+                <!-- Messages -->
+
+                <div class="chat-messages">
+
+                    <div class="doctor-message">
+
+                        <span>
+                            👩‍⚕️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Dr. Anjali
+                            </strong>
+
+                            <p>
+                                Hello! 👋 How are you feeling today?
+                            </p>
+
+                            <small>
+                                10:31 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="patient-message">
+
+                        <div>
+
+                            <strong>
+                                You
+                            </strong>
+
+                            <p>
+                                Hello Doctor! I'm feeling a little
+                                uncomfortable today.
+                            </p>
+
+                            <small>
+                                10:32 AM
+                            </small>
+
+                        </div>
+
+                        <span>
+                            👤
+                        </span>
+
+                    </div>
+
+
+                    <div class="doctor-message">
+
+                        <span>
+                            👩‍⚕️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Dr. Anjali
+                            </strong>
+
+                            <p>
+                                Okay. Please tell me more about
+                                your symptoms.
+                            </p>
+
+                            <small>
+                                10:33 AM
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Message Box -->
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        placeholder="Type your message..."
+                    >
+
+                    <button>
+                        ➤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DETAILS -->
+
+        <section class="consultation-details">
+
+            <div class="detail-card">
+
+                <span>
+                    👩‍⚕️
+                </span>
+
+                <div>
+                    <strong id="summary-doctor">
+                          Loading...
+                    </strong>
+                    <small>
+                        Doctor
+                    </small>
+
+                    <strong>
+                        Dr. Anjali Rao
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span>
+                    🩺
+                </span>
+
+                <div>
+
+                    <small>
+                        Specialization
+                    </small>
+
+                    <strong>
+                        General Medicine
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span>
+                    ⏱️
+                </span>
+
+                <div>
+
+                    <small>
+                        Consultation
+                    </small>
+
+                    <strong>
+                        30 Minutes
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <span>
+                    🔒
+                </span>
+
+                <div>
+
+                    <small>
+                        Security
+                    </small>
+
+                    <strong>
+                        Secure & Private
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOTES -->
+
+        <section class="consultation-notes">
+
+            <div class="notes-heading">
+
+                <span>
+                    📝
+                </span>
+
+                <div>
+
+                    <h2>
+                        Consultation Notes
+                    </h2>
+
+                    <p>
+                        Notes and instructions from your doctor
+                        will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="notes-content">
+
+                <p>
+                    💡 Your doctor can add important health
+                    instructions, follow-up information and
+                    treatment recommendations here.
+                </p>
+                <a href="prescription.html" class="view-prescription-btn">
+                    📄 View Prescription
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- END -->
+
+        <div class="end-consultation">
+
+            <p>
+                ❤️ Please make sure you have discussed all
+                your health concerns with your doctor.
+            </p>
+
+            <a href="patient-dashboard.html">
+                End Consultation & Return to Dashboard
+            </a>
+            <strong id="summary-patient">
+               Loading...
+            </strong>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="patient-footer">
+        <strong id="summary-patient">
+            Loading...
+        </strong>
+
+        <strong>
+            🩺 TeleCare
+        </strong>
+
+        <p>
+            💙 Healthcare from anywhere, anytime.
+        </p>
+
+        <p>
+            © 2026 TeleCare
+        </p>
+
+        <p>
+            © 2026 TeleCare
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+        const doctor =
+            params.get("doctor");
+
+        const doctors = {
+
+            anjali: "Dr. Anjali Rao",
+
+            arun: "Dr. Arun Kumar",
+
+            priya: "Dr. Priya Sharma",
+
+            rahul: "Dr. Rahul Menon"
+
+        };
+
+        if (doctors[doctor]) {
+
+            document.getElementById(
+                "consultation-doctor"
+            ).textContent = doctors[doctor];
+
+        }
+
+    </script>
+
+    const params = new URLSearchParams(window.location.search);
+
+    const doctor = params.get("doctor");
+    const patient = params.get("patient");
+
+    document.getElementById("summary-doctor").textContent =
+        doctor || "Dr. Anjali Rao";
+
+    document.getElementById("summary-patient").textContent =
+        patient || "Meena Sekar";
+        <div class="consultation-page">
+
+    <!-- Header -->
+    <header class="consultation-header">
+
+        <div class="telecare-logo">
+            🩺 TeleCare
+        </div>
+
+        <div class="consultation-status">
+            🟢 Consultation Active
+        </div>
+
+    </header>
+
+
+    <!-- Main Consultation Area -->
+    <main class="consultation-container">
+
+        <div class="consultation-title">
+
+            <span>📹 ONLINE CONSULTATION</span>
+
+            <h1>
+                Video Consultation
+            </h1>
+
+            <p>
+                Secure consultation between doctor and patient.
+            </p>
+
+        </div>
+
+
+        <!-- Participants -->
+        <section class="video-area">
+
+            <!-- Doctor -->
+            <div class="video-card">
+
+                <div class="video-avatar">
+                    👨‍⚕️
+                </div>
+
+                <h2 id="summary-doctor">
+                    Loading...
+                </h2>
+
+                <p>
+                    👨‍⚕️ Doctor
+                </p>
+
+                <span class="online-status">
+                    🟢 Online
+                </span>
+
+            </div>
+
+
+            <!-- Patient -->
+            <div class="video-card">
+
+                <div class="video-avatar patient-avatar">
+                    👤
+                </div>
+
+                <h2 id="summary-patient">
+                    Loading...
+                </h2>
+
+                <p>
+                    👤 Patient
+                </p>
+
+                <span class="online-status">
+                    🟢 Online
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call Controls -->
+        <section class="call-controls">
+
+            <button>
+                🎤
+                <span>Mute</span>
+            </button>
+
+            <button>
+                📹
+                <span>Camera</span>
+            </button>
+
+            <button>
+                🔊
+                <span>Speaker</span>
+            </button>
+
+            <button class="end-call">
+                📞
+                <span>End Call</span>
+            </button>
+
+        </section>
+
+
+        <!-- Prescription -->
+        <section class="consultation-actions">
+
+            <a href="prescription.html"
+               class="prescription-btn">
+
+                💊 Write Prescription
+
+            </a>
+
+            <a href="medical-history.html"
+               class="history-btn">
+
+                📋 Medical History
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="consultation-footer">
+
+        🩺 TeleCare &nbsp; | &nbsp;
+        💙 Better Healthcare, Anywhere
+
+    </footer>
+
+</div>
+
+</script>
+
+</body>
+
+</html>

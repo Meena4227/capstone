@@ -1,0 +1,6359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fbfaf5;
+    color: #123b37;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    width: 100%;
+    height: 80px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+
+    border-bottom: 1px solid #e5ebe7;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #123b37;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #47635e;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff6853;
+}
+
+.login-btn {
+    padding: 13px 22px;
+    border: 1px solid #dce5e1;
+    border-radius: 30px;
+}
+
+.doctor-btn {
+    background: #ff6853;
+    color: white !important;
+    padding: 14px 22px;
+    border-radius: 30px;
+}
+
+
+/* =========================
+   CENTER CONTAINER
+========================= */
+
+.hero,
+.features,
+.doctor-section {
+    width: 100%;
+}
+
+.hero-content,
+.section-heading,
+.feature-grid,
+.doctor-section {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 90px 32px 70px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.badge,
+.small-badge {
+    display: inline-block;
+
+    background: #e7f5ef;
+
+    color: #17685f;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    line-height: 1.05;
+
+    color: #102e2a;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff6853;
+
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 560px;
+
+    color: #718681;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    margin-bottom: 45px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #ff6853;
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(255, 104, 83, 0.25);
+}
+
+.secondary-btn {
+    background: white;
+
+    color: #17685f;
+
+    border: 1px solid #dce5e1;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: flex;
+
+    gap: 55px;
+}
+
+.stats h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #102e2a;
+}
+
+.stats p {
+    font-size: 13px;
+
+    color: #718681;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   LIVE CONSULTATION
+========================= */
+
+.consultation-card {
+    width: 100%;
+
+    max-width: 500px;
+
+    background: #075c56;
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 28px;
+
+    margin-left: auto;
+
+    box-shadow: 0 25px 50px rgba(7, 92, 86, 0.22);
+}
+
+.consultation-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+}
+
+.status {
+    background: rgba(255, 104, 83, 0.25);
+
+    color: #ff9b8b;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+}
+
+.heartbeat {
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #5ce0c6;
+
+    font-size: 28px;
+}
+
+.consultation-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #b7cfc9;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+.doctor-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 14px;
+
+    border-radius: 16px;
+}
+
+.doctor-avatar {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #5ce0c6;
+
+    color: #075c56;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.doctor-info h3 {
+    font-size: 15px;
+}
+
+.doctor-info p {
+    color: #b7cfc9;
+
+    font-size: 12px;
+
+    margin: 3px 0 0;
+}
+
+.doctor-info button {
+    margin-left: auto;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff6853;
+
+    color: white;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 80px 32px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    max-width: 650px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    color: #102e2a;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    max-width: 650px;
+
+    color: #718681;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    background: white;
+
+    border: 1px solid #e1ebe6;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    min-height: 220px;
+
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(11,79,74,0.08);
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #e7f5ef;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+}
+
+.feature-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #718681;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.process {
+    max-width: 1180px;
+
+    margin: 30px auto;
+
+    padding: 60px;
+
+    background: #075c56;
+
+    color: white;
+
+    border-radius: 28px;
+}
+
+.process h2 {
+    max-width: 650px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+.process > p {
+    max-width: 650px;
+
+    color: #b7cfc9;
+
+    line-height: 1.6;
+
+    margin-bottom: 45px;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+
+    background: #ff6853;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.step h3 {
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: #b7cfc9;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================
+   DOCTOR SECTION
+========================= */
+
+.doctor-section {
+    padding: 90px 32px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.doctor-section h2 {
+    max-width: 550px;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.doctor-section p {
+    max-width: 550px;
+
+    color: #718681;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Dashboard */
+
+.dashboard-preview {
+    background: #e7f5ef;
+
+    padding: 28px;
+
+    border-radius: 25px;
+
+    max-width: 500px;
+}
+
+.dashboard-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+    font-weight: bold;
+}
+
+.online {
+    color: #198b78;
+}
+
+.dashboard-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 20px;
+}
+
+.patient-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e7eeeb;
+}
+
+.patient-circle {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #d7f0e9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #075c56;
+
+    font-weight: bold;
+}
+
+.patient-row div:nth-child(2) {
+    flex: 1;
+}
+
+.patient-row p {
+    font-size: 12px;
+
+    margin: 3px 0 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+
+    background: #102e2a;
+
+    color: white;
+
+    padding: 35px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+footer p {
+    color: #a8c4bf;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 920px) {
+
+    nav a:nth-child(1),
+    nav a:nth-child(2),
+    nav a:nth-child(3) {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        max-width: 900px;
+    }
+
+    .hero p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .consultation-card {
+        margin: 0 auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doctor-section {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .dashboard-preview {
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .stats h2 {
+        font-size: 23px;
+    }
+
+    .features {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        margin: 20px;
+
+        padding: 40px 25px;
+    }
+
+    .process h2 {
+        font-size: 35px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doctor-section {
+        padding: 60px 20px;
+    }
+
+    .doctor-section h2 {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
+/* =========================================
+   PATIENT LOGIN PAGE
+========================================= */
+
+.login-header {
+    width: 100%;
+    height: 80px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e4ebe8;
+}
+
+.home-link {
+    text-decoration: none;
+
+    color: #17685f;
+
+    font-weight: bold;
+
+    padding: 10px 18px;
+
+    border: 1px solid #dce5e1;
+
+    border-radius: 25px;
+}
+
+.home-link:hover {
+    background: #e7f5ef;
+}
+
+
+/* =========================================
+   LOGIN MAIN PAGE
+========================================= */
+
+.login-page {
+    min-height: calc(100vh - 160px);
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 450px;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   LOGIN INFORMATION
+========================================= */
+
+.login-info {
+    max-width: 580px;
+}
+
+.welcome-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #ffe8e3;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.login-info h1 {
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+    color: #102e2a;
+
+    margin-bottom: 25px;
+}
+
+.login-info h1 span {
+    color: #ff6853;
+
+    font-style: italic;
+}
+
+.login-info > p {
+    color: #718681;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Login Features */
+
+.login-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.login-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 0;
+}
+
+.feature-emoji {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    background: #e7f5ef;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.login-feature h3 {
+    color: #123b37;
+
+    margin-bottom: 5px;
+
+    font-size: 16px;
+}
+
+.login-feature p {
+    color: #718681;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    border: 1px solid #e0e9e5;
+
+    box-shadow: 0 20px 50px rgba(18, 59, 55, 0.10);
+}
+
+
+/* Login Title */
+
+.login-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.login-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    background: #e7f5ef;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.login-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #123b37;
+
+    margin-bottom: 10px;
+}
+
+.login-title p {
+    color: #718681;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.login-box form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.login-box form > label {
+    color: #315c55;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d8e3df;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+    background: #fbfdfc;
+}
+
+.login-box input:focus {
+    border-color: #1b8175;
+
+    box-shadow: 0 0 0 3px rgba(27, 129, 117, 0.08);
+}
+
+
+/* Password */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 50px !important;
+}
+
+.eye {
+    position: absolute;
+
+    right: 15px;
+
+    top: 13px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: -5px;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+}
+
+.remember {
+    color: #718681;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.remember input {
+    accent-color: #17685f;
+}
+
+.login-options a {
+    color: #ff6853;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-submit {
+    width: 100%;
+
+    border: none;
+
+    background: #ff6853;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(255, 104, 83, 0.25);
+}
+
+.login-submit:hover {
+    background: #e95540;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   REGISTER
+========================================= */
+
+.register {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.register p {
+    color: #718681;
+
+    font-size: 14px;
+}
+
+.register a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #a1b2ae;
+
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e1e9e6;
+}
+
+
+/* =========================================
+   BACK HOME
+========================================= */
+
+.back-home {
+    display: block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #17685f;
+
+    border: 1px solid #dce5e1;
+
+    padding: 13px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.back-home:hover {
+    background: #e7f5ef;
+}
+
+.login-note {
+    text-align: center;
+
+    color: #9aaba7;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   LOGIN FOOTER
+========================================= */
+
+.login-footer {
+    min-height: 80px;
+
+    background: #102e2a;
+
+    color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+.login-footer p:last-child {
+    color: #a8c4bf;
+}
+
+
+/* =========================================
+   LOGIN RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+
+        max-width: 550px;
+
+        gap: 40px;
+
+        padding: 50px 25px;
+    }
+
+    .login-info {
+        text-align: center;
+    }
+
+    .welcome-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .login-info h1 {
+        font-size: 45px;
+    }
+
+    .login-feature {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .login-header {
+        padding: 0 20px;
+    }
+
+    .login-page {
+        padding: 35px 18px;
+    }
+
+    .login-box {
+        padding: 28px 22px;
+    }
+
+    .login-info h1 {
+        font-size: 38px;
+    }
+
+    .login-footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
+/* =========================================
+   CENTERED PATIENT LOGIN
+========================================= */
+
+.patient-login {
+    min-height: calc(100vh - 160px);
+
+    background: #f7fbf9;
+
+    padding: 60px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 100%;
+
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* Intro */
+
+.login-intro {
+    margin-bottom: 35px;
+}
+
+.medical-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    background: #e5f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.login-intro h1 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    color: #123b37;
+
+    margin-bottom: 15px;
+}
+
+.login-intro h1 span {
+    color: #ff6853;
+
+    font-style: italic;
+}
+
+.login-intro p {
+    max-width: 620px;
+
+    margin: auto;
+
+    color: #718681;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Login Card */
+
+.patient-login-card {
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 42px;
+
+    border-radius: 28px;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow:
+        0 20px 60px rgba(18, 59, 55, 0.12);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    background: #e7f5ef;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.patient-login-card h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #123b37;
+
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: #718681;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.patient-login-card form {
+    text-align: left;
+}
+
+.patient-login-card form > label {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.patient-login-card input[type="email"],
+.password-input input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #d8e4df;
+
+    border-radius: 12px;
+
+    background: #fbfdfc;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.patient-login-card input:focus {
+    border-color: #198477;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 132, 119, 0.08);
+}
+
+
+/* Password */
+
+.password-input {
+    position: relative;
+
+    margin-bottom: 18px;
+}
+
+.password-input input {
+    padding-right: 50px;
+}
+
+.password-input span {
+    position: absolute;
+
+    right: 15px;
+
+    top: 13px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* Options */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+}
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #718681;
+}
+
+.remember input {
+    accent-color: #17685f;
+}
+
+.login-options a {
+    color: #ff6853;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* Login Button */
+
+.patient-login-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff6853;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(255, 104, 83, 0.25);
+}
+
+.patient-login-btn:hover {
+    background: #e95540;
+
+    transform: translateY(-2px);
+}
+
+
+/* Register */
+
+.register-section {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.register-section p {
+    color: #718681;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.register-section a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* Divider */
+
+.login-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+
+    color: #a0b1ad;
+
+    font-size: 13px;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: "";
+
+    height: 1px;
+
+    background: #e2ebe7;
+
+    flex: 1;
+}
+
+
+/* Back Home */
+
+.back-home {
+    display: block;
+
+    padding: 13px;
+
+    border: 1px solid #dce5e1;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #17685f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.back-home:hover {
+    background: #e7f5ef;
+}
+
+
+/* Healthcare Features */
+
+.health-features {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.health-item {
+    background: white;
+
+    border: 1px solid #e3ece8;
+
+    border-radius: 18px;
+
+    padding: 18px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.health-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #e7f5ef;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.health-item strong {
+    font-size: 13px;
+
+    color: #123b37;
+}
+
+.health-item p {
+    color: #718681;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* Footer */
+
+.patient-footer {
+    background: #102e2a;
+
+    color: white;
+
+    min-height: 80px;
+
+    padding: 22px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 13px;
+}
+
+.patient-footer p {
+    color: #a8c4bf;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .login-intro h1 {
+        font-size: 38px;
+    }
+
+    .patient-login-card {
+        padding: 30px 22px;
+    }
+
+    .health-features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .patient-footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
+/* =========================================
+   PATIENT REGISTRATION PAGE
+========================================= */
+
+.register-page {
+    min-height: calc(100vh - 160px);
+
+    background: #f7fbf9;
+
+    padding: 60px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.register-container {
+    width: 100%;
+
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* Introduction */
+
+.register-intro {
+    margin-bottom: 35px;
+}
+
+.register-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    background: #e5f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.register-intro h1 {
+    font-family: Georgia, serif;
+
+    font-size: 46px;
+
+    line-height: 1.15;
+
+    color: #123b37;
+
+    margin-bottom: 15px;
+}
+
+.register-intro h1 span {
+    color: #ff6853;
+
+    font-style: italic;
+}
+
+.register-intro p {
+    max-width: 620px;
+
+    margin: auto;
+
+    color: #718681;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Registration Card */
+
+.register-card {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 42px;
+
+    border-radius: 28px;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow:
+        0 20px 60px rgba(18, 59, 55, 0.12);
+}
+
+.register-card .card-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    background: #e7f5ef;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.register-card h2 {
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    color: #123b37;
+
+    margin-bottom: 8px;
+}
+
+.register-subtitle {
+    color: #718681;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.register-card form {
+    text-align: left;
+}
+
+.register-card form > label:not(.terms) {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.register-card input[type="text"],
+.register-card input[type="email"],
+.register-card input[type="tel"],
+.register-card input[type="date"],
+.register-card input[type="password"],
+.register-card select {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d8e4df;
+
+    border-radius: 12px;
+
+    background: #fbfdfc;
+
+    outline: none;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.register-card input:focus,
+.register-card select:focus {
+
+    border-color: #198477;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 132, 119, 0.08);
+}
+
+
+/* Terms */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: #718681;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 3px 0 25px;
+}
+
+.terms input {
+    margin-top: 3px;
+
+    accent-color: #17685f;
+}
+
+.terms a {
+    color: #17685f;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* Register Button */
+
+.register-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff6853;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(255, 104, 83, 0.25);
+}
+
+.register-btn:hover {
+    background: #e95540;
+
+    transform: translateY(-2px);
+}
+
+
+/* Already Account */
+
+.already-account {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.already-account p {
+    color: #718681;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.already-account a {
+    color: #17685f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* Back Home */
+
+.register-back {
+    display: block;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: 1px solid #dce5e1;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #17685f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.register-back:hover {
+    background: #e7f5ef;
+}
+
+
+/* Benefits */
+
+.register-benefits {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.register-benefits div {
+    background: white;
+
+    border: 1px solid #e3ece8;
+
+    border-radius: 18px;
+
+    padding: 18px 10px;
+
+    color: #17685f;
+
+    font-size: 20px;
+}
+
+.register-benefits strong {
+    display: block;
+
+    color: #123b37;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .register-intro h1 {
+        font-size: 38px;
+    }
+
+    .register-card {
+        padding: 30px 22px;
+    }
+
+    .register-benefits {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* =========================================
+   PATIENT DASHBOARD
+========================================= */
+
+.dashboard-header {
+    width: 100%;
+    min-height: 75px;
+
+    background: white;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e1ebe7;
+
+    box-sizing: border-box;
+}
+
+.dashboard-header .logo {
+    color: #123b37;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    color: #5f7772;
+    font-size: 14px;
+}
+
+.logout-btn {
+    text-decoration: none;
+
+    color: #17685f;
+
+    border: 1px solid #d9e5e1;
+
+    padding: 9px 17px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #e7f5ef;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.patient-dashboard {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 55px 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.dashboard-welcome {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-badge {
+    display: inline-block;
+
+    background: #e7f5ef;
+
+    color: #17685f;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.dashboard-welcome h1 {
+    font-family: Georgia, serif;
+
+    color: #123b37;
+
+    font-size: 40px;
+
+    margin-bottom: 8px;
+}
+
+.dashboard-welcome p {
+    color: #718681;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 50px;
+}
+
+.action-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow: 0 8px 25px rgba(18, 59, 55, 0.06);
+
+    transition: 0.3s;
+}
+
+.action-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(18, 59, 55, 0.12);
+}
+
+.action-icon {
+    width: 52px;
+    height: 52px;
+
+    background: #e7f5ef;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+.action-card h3 {
+    color: #123b37;
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.action-card p {
+    color: #718681;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    min-height: 65px;
+
+    margin-bottom: 15px;
+}
+
+.action-card a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.dashboard-section {
+    margin-bottom: 45px;
+}
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 18px;
+}
+
+.section-label {
+    color: #ff6853;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-top: 6px;
+}
+
+.section-title > a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   APPOINTMENT CARD
+========================================= */
+
+.appointment-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1.5fr auto;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow: 0 10px 30px rgba(18, 59, 55, 0.06);
+}
+
+.doctor-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.doctor-photo {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 18px;
+
+    background: #e7f5ef;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.doctor-profile h3 {
+    color: #123b37;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.doctor-profile p {
+    color: #718681;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.doctor-status {
+    color: #198477;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.appointment-details {
+    display: flex;
+
+    gap: 25px;
+}
+
+.appointment-details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.appointment-details span {
+    color: #8a9d98;
+
+    font-size: 11px;
+}
+
+.appointment-details strong {
+    color: #315c55;
+
+    font-size: 13px;
+}
+
+.join-btn {
+    background: #ff6853;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.join-btn:hover {
+    background: #e95540;
+}
+
+
+/* =========================================
+   LOWER DASHBOARD
+========================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+}
+
+.dashboard-panel {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(18, 59, 55, 0.05);
+}
+
+.panel-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.panel-heading h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+}
+
+.panel-heading a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ACTIVITY
+========================================= */
+
+.activity {
+    display: flex;
+
+    gap: 13px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #edf2f0;
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    background: #f0f7f4;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.activity strong {
+    color: #315c55;
+
+    font-size: 13px;
+}
+
+.activity p {
+    color: #718681;
+
+    font-size: 11px;
+
+    margin: 4px 0;
+}
+
+.activity small {
+    color: #a0b0ac;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   HEALTH OVERVIEW
+========================================= */
+
+.health-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.health-box {
+    background: #f7fbf9;
+
+    border-radius: 15px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.health-box > span {
+    font-size: 23px;
+}
+
+.health-box small {
+    display: block;
+
+    color: #8a9d98;
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.health-box strong {
+    color: #315c55;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   HEALTH MESSAGE
+========================================= */
+
+.dashboard-message {
+    background: #e7f5ef;
+
+    border-radius: 22px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.message-icon {
+    width: 55px;
+    height: 55px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    flex-shrink: 0;
+}
+
+.dashboard-message h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+.dashboard-message p {
+    color: #5f7772;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.message-doctor {
+    margin-left: auto;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .quick-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .appointment-card {
+        grid-template-columns: 1fr;
+
+        align-items: start;
+    }
+
+    .appointment-details {
+        flex-wrap: wrap;
+    }
+
+    .join-btn {
+        display: inline-block;
+
+        width: fit-content;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard-header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .dashboard-user {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .patient-dashboard {
+        padding: 35px 18px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 32px;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-details {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .dashboard-message {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .message-doctor {
+        margin-left: 0;
+    }
+}
+/* =========================================
+   BOOK APPOINTMENT PAGE
+========================================= */
+
+.appointment-page {
+    min-height: calc(100vh - 160px);
+
+    background: #f7fbf9;
+
+    padding: 55px 20px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.appointment-container {
+    width: 100%;
+
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* Introduction */
+
+.appointment-intro {
+    margin-bottom: 35px;
+}
+
+.appointment-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    background: #e7f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.appointment-intro > span {
+    color: #ff6853;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.appointment-intro h1 {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    color: #123b37;
+
+    margin: 12px 0;
+}
+
+.appointment-intro h1 span {
+    color: #ff6853;
+
+    font-style: italic;
+}
+
+.appointment-intro p {
+    color: #718681;
+
+    font-size: 15px;
+}
+
+
+/* Booking Card */
+
+.appointment-booking-card {
+    background: white;
+
+    max-width: 560px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow: 0 20px 55px rgba(18, 59, 55, 0.10);
+
+    text-align: left;
+}
+
+
+/* Selected Doctor */
+
+.selected-doctor {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.selected-doctor-avatar {
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    background: #e7f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 36px;
+}
+
+.selected-label {
+    color: #ff6853;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.selected-doctor h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    margin: 5px 0;
+}
+
+.selected-doctor p {
+    color: #718681;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.doctor-rating {
+    color: #198477;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.appointment-booking-card hr {
+    border: none;
+
+    border-top: 1px solid #e7eeeb;
+
+    margin: 25px 0;
+}
+
+
+/* Form */
+
+.appointment-booking-card form > label {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.appointment-booking-card input[type="date"],
+.appointment-booking-card select,
+.appointment-booking-card textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #d8e4df;
+
+    border-radius: 12px;
+
+    background: #fbfdfc;
+
+    outline: none;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+}
+
+.appointment-booking-card textarea {
+    resize: vertical;
+
+    font-family: Arial, sans-serif;
+}
+
+.appointment-booking-card input:focus,
+.appointment-booking-card select:focus,
+.appointment-booking-card textarea:focus {
+    border-color: #198477;
+
+    box-shadow: 0 0 0 3px rgba(25, 132, 119, 0.08);
+}
+
+
+/* Consultation Options */
+
+.consultation-options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.consult-option {
+    border: 1px solid #dce7e3;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    background: #fbfdfc;
+}
+
+.consult-option:has(input:checked) {
+    border-color: #198477;
+
+    background: #e7f5ef;
+}
+
+.consult-option input {
+    accent-color: #17685f;
+}
+
+.consult-option > span {
+    font-size: 23px;
+}
+
+.consult-option strong {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 12px;
+}
+
+.consult-option small {
+    display: block;
+
+    color: #8a9d98;
+
+    font-size: 10px;
+
+    margin-top: 4px;
+}
+
+
+/* Summary */
+
+.appointment-summary {
+    background: #f7fbf9;
+
+    border-radius: 17px;
+
+    padding: 20px;
+
+    margin: 5px 0 25px;
+}
+
+.appointment-summary h3 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+.appointment-summary div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #e5ece9;
+
+    font-size: 12px;
+}
+
+.appointment-summary div:last-child {
+    border-bottom: none;
+}
+
+.appointment-summary span {
+    color: #718681;
+}
+
+.appointment-summary strong {
+    color: #315c55;
+}
+
+
+/* Confirm Button */
+
+.confirm-appointment-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #ff6853;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(255, 104, 83, 0.22);
+}
+
+.confirm-appointment-btn:hover {
+    background: #e95540;
+
+    transform: translateY(-2px);
+}
+
+
+/* Back */
+
+.back-doctors {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* Bottom Message */
+
+.appointment-message {
+    max-width: 560px;
+
+    margin: 25px auto 0;
+
+    padding: 20px 25px;
+
+    background: #e7f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+.appointment-message > div:first-child {
+    font-size: 25px;
+}
+
+.appointment-message strong {
+    color: #123b37;
+
+    font-size: 13px;
+}
+
+.appointment-message p {
+    color: #718681;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+
+    line-height: 1.5;
+}
+
+.appointment-doctors {
+    margin-left: auto;
+
+    font-size: 25px;
+
+    white-space: nowrap;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .appointment-booking-card {
+        padding: 28px 20px;
+    }
+
+    .appointment-intro h1 {
+        font-size: 36px;
+    }
+
+    .consultation-options {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-message {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .appointment-doctors {
+        margin-left: 0;
+    }
+}
+/* =========================================
+   DOCTOR LIST PAGE
+========================================= */
+
+.doctor-page {
+    min-height: calc(100vh - 150px);
+    background: #f7fbf9;
+    padding: 50px 30px;
+}
+
+
+/* INTRO */
+
+.doctor-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.doctor-main-icon {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+
+    background: #e7f5ef;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.doctor-label {
+    display: block;
+
+    color: #ff6853;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-top: 18px;
+}
+
+.doctor-intro h1 {
+    font-family: Georgia, serif;
+
+    color: #123b37;
+
+    font-size: 42px;
+
+    margin: 10px 0;
+}
+
+.doctor-intro h1 span {
+    color: #ff6853;
+    font-style: italic;
+}
+
+.doctor-intro p {
+    color: #718681;
+    font-size: 14px;
+}
+
+
+/* SEARCH */
+
+.doctor-search {
+    max-width: 850px;
+
+    margin: 35px auto;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+.doctor-search input,
+.doctor-search select {
+    padding: 14px 16px;
+
+    border: 1px solid #dce7e3;
+
+    border-radius: 12px;
+
+    background: white;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.doctor-search input {
+    flex: 1;
+}
+
+.doctor-search select {
+    width: 230px;
+}
+
+.doctor-search input:focus,
+.doctor-search select:focus {
+    border-color: #198477;
+}
+
+
+/* DOCTOR SECTION */
+
+.doctor-section {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.doctor-section h2 {
+    font-family: Georgia, serif;
+
+    color: #123b37;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+/* GRID */
+
+.doctor-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.doctor-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 30px rgba(18, 59, 55, 0.07);
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 40px rgba(18, 59, 55, 0.12);
+}
+
+
+/* AVATAR */
+
+.doctor-avatar {
+    width: 70px;
+    height: 70px;
+
+    background: #e7f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+/* AVAILABLE */
+
+.available {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    background: #e7f5ef;
+
+    color: #198477;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* TEXT */
+
+.doctor-card h3 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin: 5px 0;
+}
+
+.specialization {
+    color: #17685f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.experience {
+    color: #e99a28;
+
+    font-size: 11px;
+}
+
+.doctor-description {
+    color: #718681;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 12px 0;
+}
+
+.consultation-type {
+    color: #526d67;
+
+    background: #f3f8f6;
+
+    padding: 9px;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+}
+
+
+/* BOOK BUTTON */
+
+.book-doctor-btn {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    padding: 13px;
+
+    border-radius: 25px;
+
+    background: #ff6853;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.book-doctor-btn:hover {
+    background: #e95540;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .doctor-page {
+        padding: 35px 15px;
+    }
+
+    .doctor-intro h1 {
+        font-size: 34px;
+    }
+
+    .doctor-search {
+        flex-direction: column;
+    }
+
+    .doctor-search select {
+        width: 100%;
+    }
+
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   CENTER CONSULTATION PAGE
+========================================= */
+
+.consultation-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* Center heading */
+
+.consultation-heading {
+    text-align: center;
+
+    margin: 0 auto 35px;
+}
+
+.consultation-heading h1 {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    color: #123b37;
+
+    font-size: 32px;
+
+    margin: 12px auto;
+}
+
+.consultation-heading p {
+    text-align: center;
+
+    color: #718681;
+
+    font-size: 13px;
+}
+
+
+/* Center video + chat */
+
+.consultation-layout {
+    max-width: 1100px;
+
+    margin: 0 auto 30px;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* Video */
+
+.video-section {
+    min-height: 500px;
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* Chat */
+
+.chat-section {
+    min-height: 500px;
+
+    border-radius: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* Center doctor video */
+
+.doctor-video {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* Center details */
+
+.consultation-details {
+    max-width: 1100px;
+
+    margin: 0 auto 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+/* Notes */
+
+.consultation-notes {
+    max-width: 1100px;
+
+    margin: 0 auto 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* End consultation */
+
+.end-consultation {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .consultation-page {
+        padding: 35px 20px;
+    }
+
+    .consultation-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-details {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .consultation-page {
+        padding: 30px 15px;
+    }
+
+    .consultation-heading h1 {
+        font-size: 25px;
+    }
+
+    .consultation-details {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   PRESCRIPTION PAGE
+========================================= */
+
+.prescription-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    box-sizing: border-box;
+
+    background: #f7fbf9;
+}
+
+
+/* Heading */
+
+.prescription-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.prescription-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    background: #e7f5ef;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.prescription-heading > span {
+    color: #ff6853;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.prescription-heading h1 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    margin: 10px 0;
+}
+
+.prescription-heading p {
+    color: #718681;
+
+    font-size: 13px;
+}
+
+
+/* Main Card */
+
+.prescription-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(18, 59, 55, 0.08);
+}
+
+
+/* Doctor */
+
+.prescription-doctor {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5eeeb;
+}
+
+.doctor-prescription-avatar {
+    width: 75px;
+    height: 75px;
+
+    background: #e7f5ef;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.prescription-doctor span {
+    color: #8a9d98;
+
+    font-size: 10px;
+}
+
+.prescription-doctor h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    margin: 5px 0;
+
+    font-size: 22px;
+}
+
+.prescription-doctor p {
+    color: #17685f;
+
+    font-size: 11px;
+
+    margin: 4px 0;
+}
+
+
+/* Patient Information */
+
+.patient-prescription-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    padding: 25px 0;
+}
+
+.patient-prescription-info div {
+    background: #f7fbf9;
+
+    border-radius: 13px;
+
+    padding: 15px;
+}
+
+.patient-prescription-info small {
+    display: block;
+
+    color: #8a9d98;
+
+    font-size: 9px;
+
+    margin-bottom: 7px;
+}
+
+.patient-prescription-info strong {
+    color: #315c55;
+
+    font-size: 12px;
+}
+
+
+/* Diagnosis */
+
+.diagnosis-box {
+    background: #fff8f5;
+
+    border-left: 4px solid #ff6853;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+}
+
+.diagnosis-box h3 {
+    color: #123b37;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.diagnosis-box p {
+    color: #718681;
+
+    font-size: 12px;
+}
+
+
+/* Medicines */
+
+.medicine-section {
+    margin-bottom: 30px;
+}
+
+.medicine-section h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.medicine-table {
+    border: 1px solid #e0ebe7;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+.medicine-header,
+.medicine-row {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    align-items: center;
+}
+
+.medicine-header {
+    background: #123b37;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.medicine-row {
+    border-top: 1px solid #e5eeeb;
+
+    color: #526d67;
+
+    font-size: 11px;
+}
+
+.medicine-row:hover {
+    background: #f7fbf9;
+}
+
+
+/* Instructions */
+
+.instructions-box {
+    background: #f7fbf9;
+
+    padding: 22px;
+
+    border-radius: 17px;
+
+    margin-bottom: 25px;
+}
+
+.instructions-box h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.instructions-box ul {
+    padding-left: 20px;
+
+    margin: 0;
+}
+
+.instructions-box li {
+    color: #718681;
+
+    font-size: 12px;
+
+    margin-bottom: 9px;
+}
+
+
+/* Follow Up */
+
+.follow-up {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #e7f5ef;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+}
+
+.follow-up span {
+    color: #17685f;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.follow-up strong {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* Buttons */
+
+.prescription-actions {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.prescription-actions button,
+.prescription-actions a {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.prescription-actions button {
+    background: #17685f;
+
+    color: white;
+}
+
+.prescription-actions a {
+    background: #fff0ec;
+
+    color: #ff6853;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .prescription-page {
+        padding: 35px 15px;
+    }
+
+    .prescription-card {
+        padding: 22px;
+    }
+
+    .patient-prescription-info {
+        grid-template-columns: 1fr;
+    }
+
+    .medicine-header,
+    .medicine-row {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+    .medicine-header {
+        display: none;
+    }
+
+    .medicine-row span {
+        padding: 4px 0;
+    }
+
+    .follow-up {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .prescription-actions {
+        flex-direction: column;
+    }
+
+    .prescription-actions button,
+    .prescription-actions a {
+        width: 100%;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+}
+.view-prescription-btn {
+    display: inline-block;
+
+    background: #17685f;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.view-prescription-btn:hover {
+    background: #0f514a;
+
+    transform: translateY(-2px);
+}
+/* =========================================
+   MEDICAL HISTORY PAGE
+========================================= */
+
+.medical-history-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    box-sizing: border-box;
+
+    background: #f7fbf9;
+}
+
+
+/* Heading */
+
+.medical-history-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.history-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    background: #e7f5ef;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.medical-history-heading > span {
+    color: #ff6853;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.medical-history-heading h1 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    margin: 10px 0;
+}
+
+.medical-history-heading p {
+    color: #718681;
+
+    font-size: 13px;
+}
+
+
+/* Patient Summary */
+
+.patient-summary {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 22px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 10px 30px rgba(18, 59, 55, 0.06);
+}
+
+.patient-avatar {
+    width: 65px;
+    height: 65px;
+
+    background: #e7f5ef;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.patient-info {
+    flex: 1;
+}
+
+.patient-info span,
+.health-status span {
+    color: #8a9d98;
+
+    font-size: 9px;
+}
+
+.patient-info h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    margin: 4px 0;
+}
+
+.patient-info p {
+    color: #17685f;
+
+    font-size: 11px;
+}
+
+.health-status {
+    text-align: right;
+}
+
+.health-status strong {
+    display: block;
+
+    color: #198477;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* History Title */
+
+.history-title {
+    margin-bottom: 18px;
+}
+
+.history-title h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.history-title p {
+    color: #718681;
+
+    font-size: 11px;
+}
+
+
+/* History Card */
+
+.history-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 18px;
+
+    box-shadow: 0 8px 25px rgba(18, 59, 55, 0.05);
+
+    transition: 0.3s;
+}
+
+.history-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(18, 59, 55, 0.09);
+}
+
+
+/* Card Header */
+
+.history-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #e7eeeb;
+}
+
+.doctor-history {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.history-doctor-avatar {
+    width: 55px;
+    height: 55px;
+
+    background: #e7f5ef;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.doctor-history h3 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.doctor-history p {
+    color: #17685f;
+
+    font-size: 11px;
+}
+
+.completed {
+    background: #e7f5ef;
+
+    color: #198477;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* Details */
+
+.history-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    padding: 20px 0;
+}
+
+.history-details div {
+    background: #f7fbf9;
+
+    border-radius: 12px;
+
+    padding: 13px;
+}
+
+.history-details small {
+    display: block;
+
+    color: #8a9d98;
+
+    font-size: 8px;
+
+    margin-bottom: 6px;
+}
+
+.history-details strong {
+    color: #526d67;
+
+    font-size: 10px;
+}
+
+
+/* Actions */
+
+.history-actions {
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+.history-actions a {
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.history-actions a:first-child {
+    background: #17685f;
+
+    color: white;
+}
+
+.history-actions a:last-child {
+    background: #fff0ec;
+
+    color: #ff6853;
+}
+
+
+/* Back */
+
+.history-back {
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.history-back a {
+    color: #17685f;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* Mobile */
+
+@media (max-width: 750px) {
+
+    .medical-history-page {
+        padding: 35px 15px;
+    }
+
+    .patient-summary {
+        flex-wrap: wrap;
+    }
+
+    .health-status {
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .history-details {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .history-card-header {
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .history-details {
+        grid-template-columns: 1fr;
+    }
+
+    .history-actions {
+        flex-direction: column;
+    }
+
+    .history-actions a {
+        text-align: center;
+    }
+}
+.dashboard-history-card {
+    max-width: 500px;
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 10px 25px rgba(18, 59, 55, 0.08);
+}
+
+.history-card-icon {
+    width: 60px;
+    height: 60px;
+
+    background: #e7f5ef;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    flex-shrink: 0;
+}
+
+.dashboard-history-card h3 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    margin: 0 0 7px;
+}
+
+.dashboard-history-card p {
+    color: #718681;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+.dashboard-history-btn {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 22px;
+
+    background: #17685f;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.dashboard-history-btn:hover {
+    background: #0f514a;
+}
+/* =========================================
+   DOCTOR LOGIN PAGE
+========================================= */
+
+.doctor-login-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background: #f7fbf9;
+}
+
+.doctor-login-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow:
+        0 20px 50px rgba(18, 59, 55, 0.10);
+
+    box-sizing: border-box;
+}
+
+.doctor-login-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 15px;
+
+    background: #e7f5ef;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+.doctor-login-brand {
+    color: #17685f;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+.doctor-login-label {
+    color: #ff6853;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.doctor-login-card h1 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin: 12px 0;
+}
+
+.doctor-login-card > p {
+    color: #718681;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.doctor-login-card form {
+    text-align: left;
+}
+
+.doctor-login-card label {
+    display: block;
+
+    color: #315c55;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin: 15px 0 7px;
+}
+
+.doctor-login-card input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dce8e4;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    font-size: 12px;
+}
+
+.doctor-login-card input:focus {
+    border-color: #17685f;
+}
+
+.doctor-login-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    margin-top: 22px;
+
+    border-radius: 25px;
+
+    background: #17685f;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.doctor-login-btn:hover {
+    background: #0f514a;
+}
+
+.doctor-login-links {
+    margin-top: 18px;
+}
+
+.doctor-login-links a {
+    color: #ff6853;
+
+    font-size: 11px;
+
+    text-decoration: none;
+}
+
+.doctor-back {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5eeeb;
+}
+
+.doctor-back a {
+    color: #17685f;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+/* =========================================
+   CENTERED DOCTOR LOGIN
+========================================= */
+
+.doctor-login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7fbf9,
+            #edf8f4
+        );
+}
+
+
+/* Login Card */
+
+.doctor-login-card {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    background: white;
+
+    padding: 45px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow:
+        0 20px 60px
+        rgba(18, 59, 55, 0.12);
+
+}
+
+
+/* Doctor Icon */
+
+.doctor-login-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 18px;
+
+    background: #e7f5ef;
+
+    border-radius: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 48px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(23, 104, 95, 0.10);
+
+}
+
+
+/* Logo */
+
+.doctor-login-brand {
+
+    color: #17685f;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Label */
+
+.doctor-login-label {
+
+    display: inline-block;
+
+    color: #ff6853;
+
+    background: #fff0ec;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* Heading */
+
+.doctor-login-card h1 {
+
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin: 18px 0 10px;
+
+}
+
+
+/* Description */
+
+.doctor-login-card > p {
+
+    color: #718681;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* Form */
+
+.doctor-login-card form {
+
+    text-align: left;
+
+}
+
+
+/* Labels */
+
+.doctor-login-card form > label {
+
+    display: block;
+
+    color: #315c55;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin: 16px 0 8px;
+
+}
+
+
+/* Inputs */
+
+.doctor-login-card input[type="email"],
+.doctor-login-card input[type="password"] {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dce8e4;
+
+    border-radius: 13px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    font-size: 12px;
+
+    background: #fbfdfc;
+
+}
+
+
+/* Input focus */
+
+.doctor-login-card input[type="email"]:focus,
+.doctor-login-card input[type="password"]:focus {
+
+    border-color: #17685f;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(23, 104, 95, 0.08);
+
+}
+
+
+/* Remember + Forgot */
+
+.doctor-login-options {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+}
+
+
+/* Remember */
+
+.remember-doctor {
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: 0 !important;
+
+    color: #718681 !important;
+
+    font-size: 10px !important;
+
+    font-weight: normal !important;
+
+}
+
+
+.remember-doctor input {
+
+    width: auto !important;
+
+}
+
+
+/* Forgot */
+
+.doctor-login-options a {
+
+    color: #ff6853;
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+/* Login Button */
+
+.doctor-login-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    margin-top: 25px;
+
+    border-radius: 28px;
+
+    background: #17685f;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.doctor-login-btn:hover {
+
+    background: #0f514a;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(23, 104, 95, 0.20);
+
+}
+
+
+/* Message */
+
+.doctor-login-message {
+
+    margin-top: 22px;
+
+    padding: 13px;
+
+    background: #f7fbf9;
+
+    border-radius: 13px;
+
+    color: #718681;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* Back Home */
+
+.doctor-back {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e5eeeb;
+
+}
+
+
+.doctor-back a {
+
+    color: #17685f;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .doctor-login-page {
+
+        padding: 20px;
+
+    }
+
+    .doctor-login-card {
+
+        padding: 30px 22px;
+
+    }
+
+    .doctor-login-card h1 {
+
+        font-size: 25px;
+
+    }
+
+    .doctor-login-options {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+}
+/* =========================================
+   DOCTOR DASHBOARD
+========================================= */
+
+.doctor-dashboard-header {
+    min-height: 70px;
+
+    padding: 0 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid #e0ebe7;
+}
+
+.doctor-dashboard-logo {
+    color: #17685f;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.doctor-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.doctor-profile span {
+    color: #315c55;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.doctor-profile a {
+    color: #ff6853;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* Main */
+
+.doctor-dashboard {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* Welcome */
+
+.doctor-welcome {
+    background: #e7f5ef;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.doctor-welcome > div:first-child {
+    flex: 1;
+}
+
+.doctor-welcome span {
+    color: #ff6853;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.doctor-welcome h1 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    margin: 10px 0;
+}
+
+.doctor-welcome p {
+    color: #718681;
+
+    font-size: 12px;
+}
+
+.doctor-welcome-icon {
+    width: 90px;
+
+    height: 90px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+}
+
+
+/* Statistics */
+
+.doctor-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.doctor-stat-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(18, 59, 55, 0.05);
+}
+
+.stat-icon {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.doctor-stat-card span {
+    display: block;
+
+    color: #718681;
+
+    font-size: 10px;
+
+    margin-bottom: 7px;
+}
+
+.doctor-stat-card strong {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+}
+
+
+/* Appointment Section */
+
+.appointments-section {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2,
+.doctor-quick-actions h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #718681;
+
+    font-size: 10px;
+}
+
+.appointment-count {
+    background: #e7f5ef;
+
+    color: #17685f;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/* Appointment Card */
+
+.doctor-appointment-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(18, 59, 55, 0.04);
+}
+
+.appointment-patient {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.patient-small-avatar {
+    width: 48px;
+
+    height: 48px;
+
+    background: #f7fbf9;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.appointment-patient h3 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.appointment-patient p {
+    color: #718681;
+
+    font-size: 9px;
+}
+
+.appointment-time span {
+    display: block;
+
+    color: #8a9d98;
+
+    font-size: 8px;
+
+    margin-bottom: 5px;
+}
+
+.appointment-time strong {
+    color: #315c55;
+
+    font-size: 11px;
+}
+
+.appointment-status {
+    color: #198477;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.start-consultation-btn {
+    background: #17685f;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.start-consultation-btn:hover {
+    background: #0f514a;
+}
+
+
+/* Quick Actions */
+
+.doctor-quick-actions {
+    margin-top: 20px;
+}
+
+.quick-action-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.quick-action-card {
+    background: white;
+
+    border: 1px solid #e0ebe7;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(18, 59, 55, 0.08);
+}
+
+.quick-action-card span {
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.quick-action-card strong {
+    display: block;
+
+    color: #123b37;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.quick-action-card small {
+    color: #718681;
+
+    font-size: 9px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .doctor-dashboard-header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .doctor-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .doctor-appointment-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quick-action-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .doctor-dashboard {
+        padding: 30px 15px;
+    }
+
+    .doctor-welcome {
+        text-align: center;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .doctor-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-appointment-card {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+.doctor-home-btn {
+    display: inline-block;
+
+    margin: 10px;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    background: #17685f;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.doctor-home-btn:hover {
+    background: #0f514a;
+
+    transform: translateY(-2px);
+}
+/* =========================================
+   VIDEO CONSULTATION
+========================================= */
+
+.consultation-page {
+    min-height: 100vh;
+    background: #f7fbf9;
+}
+
+.consultation-header {
+    height: 70px;
+    padding: 0 50px;
+    background: white;
+    border-bottom: 1px solid #e0ebe7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.telecare-logo {
+    color: #17685f;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.consultation-status {
+    color: #198477;
+    background: #e7f5ef;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.consultation-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.consultation-title span {
+    color: #ff6853;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.consultation-title h1 {
+    color: #123b37;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin: 12px 0 8px;
+}
+
+.consultation-title p {
+    color: #718681;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+
+/* Video Cards */
+
+.video-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.video-card {
+    min-height: 280px;
+
+    background: #123b37;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 15px 35px
+        rgba(18, 59, 55, 0.15);
+}
+
+.video-avatar {
+    width: 100px;
+    height: 100px;
+
+    background: #e7f5ef;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.patient-avatar {
+    background: #fff0ec;
+}
+
+.video-card h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.video-card p {
+    color: #c8ddd8;
+    font-size: 10px;
+    margin: 5px 0 10px;
+}
+
+.online-status {
+    color: #a9eadc;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+
+/* Controls */
+
+.call-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.call-controls button {
+    width: 80px;
+    height: 65px;
+
+    border: 1px solid #dce8e4;
+
+    border-radius: 18px;
+
+    background: white;
+
+    color: #315c55;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 20px;
+}
+
+.call-controls button span {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.call-controls button:hover {
+    transform: translateY(-3px);
+}
+
+.call-controls .end-call {
+    background: #ff6853;
+    color: white;
+    border: none;
+}
+
+
+/* Action Buttons */
+
+.consultation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.prescription-btn,
+.history-btn {
+    padding: 13px 22px;
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.prescription-btn {
+    background: #17685f;
+    color: white;
+}
+
+.history-btn {
+    background: #fff0ec;
+    color: #ff6853;
+}
+
+
+/* Footer */
+
+.consultation-footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #718681;
+
+    font-size: 10px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .consultation-header {
+        padding: 0 20px;
+    }
+
+    .video-area {
+        grid-template-columns: 1fr;
+    }
+
+    .call-controls {
+        flex-wrap: wrap;
+    }
+
+    .consultation-actions {
+        flex-direction: column;
+    }
+
+}
+/* =========================================
+   PRESCRIPTION PAGE
+========================================= */
+
+.prescription-page {
+    min-height: 100vh;
+    background: #f7fbf9;
+}
+
+.prescription-header {
+    min-height: 70px;
+    padding: 0 50px;
+
+    background: white;
+    border-bottom: 1px solid #e0ebe7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prescription-header a {
+    color: #17685f;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.prescription-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.prescription-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.prescription-title span {
+    color: #ff6853;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.prescription-title h1 {
+    color: #123b37;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 12px 0 8px;
+}
+
+.prescription-title p {
+    color: #718681;
+    font-size: 11px;
+}
+
+.prescription-card {
+    background: white;
+    border: 1px solid #e0ebe7;
+    border-radius: 22px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(18, 59, 55, 0.05);
+}
+
+.prescription-card h2 {
+    color: #123b37;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.prescription-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.prescription-info div {
+    background: #f7fbf9;
+    padding: 15px;
+    border-radius: 14px;
+}
+
+.prescription-info span {
+    display: block;
+    color: #718681;
+    font-size: 9px;
+    margin-bottom: 7px;
+}
+
+.prescription-info strong {
+    color: #315c55;
+    font-size: 11px;
+}
+
+.prescription-card form label {
+    display: block;
+    color: #315c55;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+.prescription-card input,
+.prescription-card select,
+.prescription-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #dce8e4;
+    border-radius: 12px;
+    outline: none;
+    font-size: 11px;
+    background: #fbfdfc;
+}
+
+.prescription-card textarea {
+    resize: vertical;
+}
+
+.prescription-card input:focus,
+.prescription-card select:focus,
+.prescription-card textarea:focus {
+    border-color: #17685f;
+}
+
+.save-prescription-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #17685f;
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.save-prescription-btn:hover {
+    background: #0f514a;
+}
+
+.prescription-back {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prescription-back a {
+    color: #17685f;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .prescription-header {
+        padding: 0 20px;
+    }
+
+    .prescription-info {
+        grid-template-columns: 1fr;
+    }
+
+    .prescription-container {
+        padding: 30px 15px;
+    }
+}
+.saved-prescription-section {
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 1px solid #e0ebe7;
+
+    box-shadow:
+        0 8px 25px
+        rgba(18, 59, 55, 0.06);
+}
+
+.saved-prescription-section h2 {
+    color: #123b37;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.prescription-history-card {
+    background: #f7fbf9;
+
+    padding: 20px;
+
+    border-radius: 16px;
+}
+
+.prescription-history-card h3 {
+    color: #17685f;
+
+    margin-top: 0;
+
+    font-family: Georgia, serif;
+}
+
+.prescription-history-card p {
+    color: #718681;
+
+    font-size: 11px;
+
+    margin: 10px 0;
+}
+
+.prescription-history-card strong {
+    color: #315c55;
+}
+
+.prescription-history-card small {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #8a9d98;
+
+    font-size: 9px;
+}

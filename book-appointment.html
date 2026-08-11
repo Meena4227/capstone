@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | TeleCare</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="dashboard-header">
+
+        <div class="logo">
+            🩺 TeleCare
+        </div>
+
+        <div class="dashboard-user">
+
+            <a href="doctor-list.html"
+               class="logout-btn">
+                ← Doctors
+            </a>
+
+            <a href="index.html"
+               class="logout-btn">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="appointment-page">
+
+        <div class="appointment-container">
+
+
+            <!-- INTRO -->
+
+            <div class="appointment-intro">
+
+                <div class="appointment-icon">
+                    📅
+                </div>
+
+                <span>
+                    🩺 TELECARE APPOINTMENTS
+                </span>
+
+                <h1>
+                    Book Your
+                    <span>Consultation</span> ❤️
+                </h1>
+
+                <p>
+                    Choose your preferred date and time
+                    to connect with your doctor.
+                </p>
+
+            </div>
+
+
+            <!-- APPOINTMENT CARD -->
+
+            <div class="appointment-booking-card">
+
+
+                <!-- Doctor Information -->
+
+                <div class="selected-doctor">
+
+                    <div class="selected-doctor-avatar">
+                        👩‍⚕️
+                    </div>
+
+                    <div>
+
+                        <span class="selected-label">
+                            SELECTED DOCTOR
+                        </span>
+
+                        <h2>
+                            <strong id="summary-doctor">
+                             Dr. Anjali Rao
+                            </strong>
+                        </h2>
+
+                        <p>
+                            🩺 General Medicine
+                        </p>
+
+                        <span class="doctor-rating">
+                            ⭐ 4.8 &nbsp; | &nbsp; 🟢 Available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- Booking Form -->
+
+                <form id="appointment-form">
+
+
+                    <!-- Date -->
+
+                    <label for="appointment-date">
+                        📅 Select Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointment-date"
+                        required
+                    >
+
+
+                    <!-- Time -->
+
+                    <label for="appointment-time">
+                        🕐 Select Preferred Time
+                    </label>
+
+                    <select
+                        id="appointment-time"
+                        required
+                    >
+
+                        <option value="">
+                            Choose a time
+                        </option>
+
+                        <option>
+                            09:00 AM
+                        </option>
+
+                        <option>
+                            10:00 AM
+                        </option>
+
+                        <option>
+                            10:30 AM
+                        </option>
+
+                        <option>
+                            11:00 AM
+                        </option>
+
+                        <option>
+                            02:00 PM
+                        </option>
+
+                        <option>
+                            03:00 PM
+                        </option>
+
+                        <option>
+                            04:00 PM
+                        </option>
+
+                        <option>
+                            05:00 PM
+                        </option>
+
+                    </select>
+
+
+                    <!-- Consultation Type -->
+
+                    <label>
+                        📹 Consultation Type
+                    </label>
+
+                    <div class="consultation-options">
+
+                        <label class="consult-option">
+
+                            <input
+                                type="radio"
+                                name="consultation"
+                                value="video"
+                                checked
+                            >
+
+                            <span>
+                                📹
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Video Consultation
+                                </strong>
+
+                                <small>
+                                    Talk to your doctor online
+                                </small>
+                            </div>
+
+                        </label>
+
+
+                        <label class="consult-option">
+
+                            <input
+                                type="radio"
+                                name="consultation"
+                                value="audio"
+                            >
+
+                            <span>
+                                📞
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Audio Consultation
+                                </strong>
+
+                                <small>
+                                    Talk to your doctor by phone
+                                </small>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Reason -->
+
+                    <label for="reason">
+                        📝 Reason for Consultation
+                    </label>
+
+                    <textarea
+                        id="reason"
+                        rows="4"
+                        placeholder="Briefly describe your health concern..."
+                    ></textarea>
+
+
+                    <!-- Appointment Summary -->
+
+                    <div class="appointment-summary">
+
+                        <h3>
+                            📋 Appointment Summary
+                        </h3>
+                        <div>
+                        <span>
+                           👨‍⚕️ Doctor
+                        </span>
+
+                        <strong id="summary-doctor">
+                             Dr. Anjali Rao
+                        </strong>
+                        </div>
+                        <div>
+                            <span>
+                                🩺 Specialization
+                            </span>
+
+                            <strong>
+                                General Medicine
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                💰 Consultation Fee
+                            </span>
+
+                            <strong>
+                                ₹500
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm -->
+
+                    <button
+                        type="submit"
+                        class="confirm-appointment-btn">
+
+                        ✅ Confirm Appointment
+
+                    </button>
+
+                </form>
+
+
+                <!-- Back -->
+
+                <a
+                    href="doctor-list.html"
+                    class="back-doctors">
+
+                    ← 👨‍⚕️ Choose Another Doctor
+
+                </a>
+
+            </div>
+
+
+            <!-- Bottom Message -->
+
+            <div class="appointment-message">
+
+                <div>
+                    🔒
+                </div>
+
+                <div>
+
+                    <strong>
+                        Your information is secure.
+                    </strong>
+
+                    <p>
+                        TeleCare protects your personal and
+                        healthcare information during your consultation.
+                    </p>
+
+                </div>
+
+                <div class="appointment-doctors">
+                    👨‍⚕️ 👩‍⚕️ 🩺 ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="patient-footer">
+
+        <div>
+            🩺 <strong>TeleCare</strong>
+        </div>
+
+        <p>
+            💙 Healthcare from anywhere, anytime.
+        </p>
+
+        <p>
+            © 2026 TeleCare
+        </p>
+
+    </footer>
+</body>
+</script>
+</body>
+<script>
+
+    const appointmentForm = document.getElementById("appointment-form");
+
+    appointmentForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const params = new URLSearchParams(window.location.search);
+
+        const doctor = params.get("doctor");
+
+        window.location.href =
+            "consultation.html?doctor=" + doctor;
+
+    });
+
+</script>
+</html>
